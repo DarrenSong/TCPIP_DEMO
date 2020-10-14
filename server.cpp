@@ -24,6 +24,8 @@ int main()
 	//bind socket
 	bind(server_socket,(SOCKADDR*)&sock_add,sizeof(sock_add));
 
+	listen(server_socket, 10);
+
 	//wait for the connection of client
 	SOCKADDR client_addr;
 	int client_addr_size = sizeof(client_addr);
